@@ -1,0 +1,3 @@
+We collaborated with Oliver, Carl, and Brian.
+
+We based our logic for our insertion sort from the book's section about it.

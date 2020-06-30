@@ -1,0 +1,49 @@
+public void add(Country country){
+    Node node;
+    // if size = 0, create new node and make head reference it
+    if (size == 0){
+        node = new Node(country);
+        head = node;
+        //System.out.println("head is now " + head.getCountry().getName());
+    }
+    //if size = 1
+    else if (size == 1){
+        //System.out.println("Comparison result: " + comparator.compare(head.getCountry(), country));
+        if (comparator.compare(head.getCountry(), country) == 1){
+            node = new Node(country);
+            node.next = head;
+            head = node;
+        }
+        else{
+            node = new Node(country);
+            head.next = node;
+        }
+    }
+    //if size > 1
+    else {
+        Node curNode = head;
+        if (comparator.compare(curNode.getCountry(), country) == 1){
+            node = new Node(country);
+            node.next = head;
+            head = node;
+        }
+        else {
+            while(curNode.next != null && comparator.compare(curNode.getCountry(), country) == -1) {
+                curNode = curNode.next;
+            }
+                node = new Node(country);
+                node.next = curNode.next;
+                curNode.next = node;
+            }
+            if (curNode.next == null){
+                //System.out.println("curNode: " + curNode.getCountry().getName());
+                //System.out.println("Comparison result: " + comparator.compare(curNode.getCountry(), country));
+                if (comparator.compare(curNode.getCountry(), country) == 1){
+                    node = new Node(country, curNode);
+                    //System.out.println("node just added: " + node.getCountry().getName());
+                    //System.out.println("what node now references: " + curNode.getCountry().getName());
+                    curNode.next = null;
+                }
+            }
+        }
+    }

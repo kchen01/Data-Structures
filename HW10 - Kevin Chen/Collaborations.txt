@@ -1,0 +1,1 @@
+I used lines from the book that explained how to increment and decrement frontIndex and backIndex using “%”.
