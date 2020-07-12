@@ -1,0 +1,4 @@
+Collaborations.txt
+
+
+We did not collaborate with anyone when doing this assignment, and looked up oracle documentation when syntax didn’t immediately jump into our heads.

@@ -1,0 +1,21 @@
+
+joe	bob
+joe	sam
+joe	jack
+joe	john
+bob	joe
+bob	sam
+bob	jack
+bob	john
+sam	joe
+sam	bob
+sam	jack
+sam	john
+jack	bob
+jack	sam
+jack	john
+jack	joe
+john	joe
+john	bob
+john	jack
+john	sam

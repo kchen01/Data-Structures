@@ -86,7 +86,7 @@ public class FlashcardPriorityQueue implements PriorityQueue<Flashcard>{
         // while curIndex has children, swap if necessary
         int swapChildIndex = getIndexOfSmallestChild(curIndex);
         while (hasChild(curIndex) && checkChild(curIndex)) {
-            swapSmallestChild(curIndex, swapChildIndex);
+            bubbleUpSmallestChild(curIndex, swapChildIndex);
             curIndex = swapChildIndex;
             swapChildIndex = getIndexOfSmallestChild(curIndex);
         }
@@ -104,7 +104,7 @@ public class FlashcardPriorityQueue implements PriorityQueue<Flashcard>{
     This method swaps a parent card with its smallest child
     */
     }
-    public void swapSmallestChild(int parentIndex, int minChildIndex) {
+    public void bubbleUpSmallestChild(int parentIndex, int minChildIndex) {
         Flashcard temp = flashcards[parentIndex];
         flashcards[parentIndex] = flashcards[minChildIndex];
         flashcards[minChildIndex] = temp;

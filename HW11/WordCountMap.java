@@ -217,6 +217,7 @@ public class WordCountMap{
         while(iterator.hasNext()){
             getWordCountsByCount(iterator.next(), list);
         }
+
         InsertionSort(list);
         return list;
     }
